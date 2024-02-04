@@ -45,7 +45,7 @@ public class BullsAndCowsGame {
         Random random = new Random();
 
         for (int i = 0; i < CODE_LENGTH; i++) {
-            int choice = random.nextInt(3); // 0 - буква (EN), 1 - буква (RU), 2 - цифра
+            int choice = random.nextInt(3);
             switch (choice) {
                 case 0:
                     code[i] = ALPHABET_EN[random.nextInt(ALPHABET_EN.length)];
@@ -65,7 +65,7 @@ public class BullsAndCowsGame {
     private String getUserInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите ваш вариант кода: ");
-        return scanner.nextLine().toLowerCase(); // Приводим к нижнему регистру для удобства сравнения
+        return scanner.nextLine().toLowerCase();
     }
 
     private boolean isValidInput(String input) {
